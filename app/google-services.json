@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "761792010354",
+    "project_id": "exercisehouse-91899",
+    "storage_bucket": "exercisehouse-91899.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761792010354:android:a5138a8ce79a1b554acaeb",
+        "android_client_info": {
+          "package_name": "com.example.exercisehouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761792010354-a2kicrdibvjm2u4ke936813l287nk3su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASsiK33tTDWQqlwwdrKvt0y0ab2msi1J8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761792010354-a2kicrdibvjm2u4ke936813l287nk3su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

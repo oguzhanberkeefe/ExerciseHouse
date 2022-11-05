@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/test3"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/exercisehouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/auletta"
+        android:text="Exercise House"
+        android:alpha="0.7"
+        android:textColor="@color/white"
+        android:textSize="72sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/girisyap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="610dp"
+        android:alpha="0.8"
+        android:clickable="true"
+        android:fontFamily="@font/basiclight"
+        android:text="Giriş Yap"
+        android:textColor="@color/white"
+        android:textSize="33sp" />
+
+    <TextView
+        android:id="@+id/kayitol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="275dp"
+        android:layout_marginTop="610dp"
+        android:alpha="0.8"
+        android:clickable="true"
+        android:fontFamily="@font/basiclight"
+        android:text="Kayıt Ol"
+        android:textColor="@color/white"
+        android:textSize="33sp" />
+
+    <TextView
+        android:id="@+id/ve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="610dp"
+        android:alpha="0.8"
+        android:fontFamily="@font/basiclight"
+        android:text="&amp;"
+        android:textColor="@color/white"
+        android:textSize="33sp" />
+
+
+
+
+</RelativeLayout>
