@@ -26,6 +26,21 @@
             android:name=".urunler.OnlineDetay"
             android:exported="false" />
         <activity
+            android:name=".urunler.AntrenmanDetay"
+            android:exported="false" />
+        <activity
+            android:name=".urunler.BeslenmeDetay"
+            android:exported="false" />
+        <activity
+            android:name=".urunler.BireBirDetay"
+            android:exported="false" />
+        <activity
+            android:name=".urunler.EvdeEgzersizDetay"
+            android:exported="false" />
+        <activity
+            android:name=".urunler.MedikalDetay"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

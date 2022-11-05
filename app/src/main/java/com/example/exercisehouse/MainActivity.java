@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +17,11 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.exercisehouse.adapters.MainAdapter;
 import com.example.exercisehouse.adapters.MainBean;
+import com.example.exercisehouse.urunler.AntrenmanDetay;
+import com.example.exercisehouse.urunler.BeslenmeDetay;
+import com.example.exercisehouse.urunler.BireBirDetay;
+import com.example.exercisehouse.urunler.EvdeEgzersizDetay;
+import com.example.exercisehouse.urunler.MedikalDetay;
 import com.example.exercisehouse.urunler.OnlineDetay;
 import com.google.android.material.tabs.TabLayout;
 
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         backarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "backarrow", Toast.LENGTH_SHORT).show();
+                onBackPressed();
             }
         });
     }
@@ -125,7 +129,37 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, OnlineDetay.class));
                         break;
                     case 1:
-                        Toast.makeText(MainActivity.this, "1", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, BeslenmeDetay.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, MedikalDetay.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, AntrenmanDetay.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, EvdeEgzersizDetay.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, BireBirDetay.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, OnlineDetay.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this, BeslenmeDetay.class));
+                        break;
+                    case 8:
+                        startActivity(new Intent(MainActivity.this, AntrenmanDetay.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(MainActivity.this, MedikalDetay.class));
+                        break;
+                    case 10:
+                        startActivity(new Intent(MainActivity.this, EvdeEgzersizDetay.class));
+                        break;
+                    case 11:
+                        startActivity(new Intent(MainActivity.this, BireBirDetay.class));
                         break;
                     default:
                         break;

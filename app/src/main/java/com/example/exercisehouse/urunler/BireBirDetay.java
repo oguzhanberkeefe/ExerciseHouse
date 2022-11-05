@@ -12,7 +12,7 @@ import com.example.exercisehouse.R;
 
 import java.util.Random;
 
-public class OnlineDetay extends AppCompatActivity {
+public class BireBirDetay extends AppCompatActivity {
 
 
     private Button sepeteekle;
@@ -23,7 +23,7 @@ public class OnlineDetay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_onlinedetay);
+        setContentView(R.layout.activity_birebirdetay);
 
         backarrow = findViewById(R.id.backarrow);
         id2 = findViewById(R.id.id);
