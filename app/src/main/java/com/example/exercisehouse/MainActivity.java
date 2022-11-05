@@ -1,5 +1,6 @@
 package com.example.exercisehouse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -7,13 +8,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.exercisehouse.adapters.MainAdapter;
 import com.example.exercisehouse.adapters.MainBean;
+import com.example.exercisehouse.urunler.OnlineDetay;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
 
     //tab的标签
-    private String[] str = {"En Çok Satılanlar", "Online Eğitim","Beslenme Programı","anrenman programı"};
+    private String[] str = {"Hepsi", "Online Eğitim Programı","Beslenme Programı","Antrenman Programı","Medikal Egzersiz Programı","Evde Egzersiz Programı","Bire Bir Özel Ders"};
 
 
 
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
      * 需要定位的地方，从小到大排列，需要和tab对应起来，长度一样
      */
 
-    private int[] str1 = {0, 8, 27, 38, 59  };
+    private int[] str1 = {0 , 6 , 7 , 8 , 9 , 10 , 11  };
     private boolean isScrolled = false;
 
 
@@ -104,10 +109,30 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.mian_recy);
         tabLayout = findViewById(R.id.main_tab);
 
-        manager = new GridLayoutManager(this,2);
+        manager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(manager);
         adapter = new MainAdapter(list);
         recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
+
+                switch (position)
+                {
+
+                    case 0:
+                        startActivity(new Intent(MainActivity.this, OnlineDetay.class));
+                        break;
+                    case 1:
+                        Toast.makeText(MainActivity.this, "1", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+        });
 
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -171,74 +196,33 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
 
 
-        //En Çok Satılanlar
-        list.add(new MainBean("Deneme","Online Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme2","Beslenme",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme3","Medikal Egezersiz",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme4","bire bir ders",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme5","Supplement",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme6","Supplement",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme7","Supplement",R.drawable.ozanardakoc));
+        //Hepsi
+        list.add(new MainBean("Online Eğitim Programı","Online Eğitim Programı",R.drawable.online));
+        list.add(new MainBean("Beslenme Programı","Beslenme Programı",R.drawable.beslenme));
+        list.add(new MainBean("Medikal Egezersiz","Medikal Egezersiz Programı",R.drawable.medikal));
+        list.add(new MainBean("Antrenman Programı","Antrenman Programı",R.drawable.antrenman));
+        list.add(new MainBean("Evde Egzersiz Programı","Evde Egzersiz Programı",R.drawable.evde));
+        list.add(new MainBean("Bire Bir Özel Ders","Bire Bir Özel Ders",R.drawable.ozanardakoc));
 
 
 
-        //Sıcaklar
-        list.add(new MainBean("Deneme8","Online Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Online Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Online Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
+        // Online Eğitim Programı
+        list.add(new MainBean("Online Eğitim Programı","Online Eğitim Programı",R.drawable.online));
 
+        // Beslenme Programı
+        list.add(new MainBean("Beslenme Programı","Beslenme Programı",R.drawable.beslenme));
 
+        // Antrenman Programı
+        list.add(new MainBean("Antrenman Programı","Antrenman Programı",R.drawable.antrenman));
 
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
+        // Medikal Egzersiz Programı
+        list.add(new MainBean("Medikal Egzersiz Programı","Medikal Egzersiz Programı",R.drawable.medikal));
 
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme8","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme9","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme10","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme11","Uzaktan Eğitim",R.drawable.ozanardakoc));
-        list.add(new MainBean("Deneme12","Uzaktan Eğitim",R.drawable.ozanardakoc));
+        // Evde Egzersiz Programı
+        list.add(new MainBean("Evde Egzersiz Programı","Evde Egzersiz Programı",R.drawable.evde));
 
+        // Bire Bir Özel Ders
+        list.add(new MainBean("Bire Bir Özel Ders","Bire Bir Özel Ders",R.drawable.ozanardakoc));
 
 
     }

@@ -23,6 +23,9 @@
             android:name=".loginregister.LoginPageActivity"
             android:exported="false" />
         <activity
+            android:name=".urunler.OnlineDetay"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

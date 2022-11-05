@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/drawable-v24/blacktoopac.xml" value="0.4595" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/drawable-v24/button_bg.xml" value="0.4595" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.4595" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/drawable-v24/ic_baseline_horizontal_rule_24.xml" value="0.4595" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/drawable/input_bg.xml" value="0.4595" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/activity_first_screen.xml" value="0.55" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/activity_login_page.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/activity_main.xml" value="0.3762541806020067" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/activity_onlinedetay.xml" value="0.4491017964071856" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/activity_register_page.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/main_item.xml" value="0.31354166666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/ExerciseHouse/app/src/main/res/layout/toolbar.xml" value="0.553125" />

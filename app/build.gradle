@@ -40,7 +40,7 @@ dependencies {
 
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.10'
-
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 
 
     testImplementation 'junit:junit:4.13.2'
